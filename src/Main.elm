@@ -25,6 +25,17 @@ type alias Model =
     , url : Url.Url
     }
 
+type alias Triple =
+  {    subject : Url.Url 
+    ,  predicate : Url.Url
+    , object : String  --deal with literal or URI and typed literals later
+  }
+
+type alias Quad =
+  { graph : Url.Url 
+    , triple : Triple
+  }
+
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg)
 init flags url key =
     ( Model key url, Cmd.none)
