@@ -28,7 +28,7 @@ type alias Model =
 type alias Triple =
   {    subject : Url.Url 
     ,  predicate : Url.Url
-    , object : String  --deal with literal or URI and typed literals later
+    , object : String  --deal with literal or URI, lang and typed literals later
   }
 
 type alias Quad =
